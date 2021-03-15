@@ -1,0 +1,38 @@
+.chef
+  @include flex(space-between, center)
+  flex-wrap: wrap
+  background: $chef-bg
+  padding: 0 42px
+  @include phone()
+    padding: 0
+  &__left, &__right
+    width: 49%
+    @include phone()
+      width: 100%
+  &__left
+    height: 100%
+    overflow: hidden
+    @include phone()
+      max-height: 460px
+    img
+      height: 100%
+      max-width: none
+      position: relative
+      left: 50%
+      transform: translateX(-50%)
+  &__right
+    @include phone()
+      padding: 30px
+
+.chef-info
+  color: $chef-color
+  font-weight: bold
+  &__name-chi
+    font-size: 20px
+    line-height: 32px
+  &__name-eng
+    margin-bottom: 16px
+  &__intro
+    line-height: 1.8
+    p
+      margin-bottom: 10px

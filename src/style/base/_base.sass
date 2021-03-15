@@ -1,0 +1,51 @@
+@import variables, mixins, breakpoint, header, footer
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;900&display=swap')
+  
+*, *:before, *:after
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  outline: none
+  -webkit-font-smoothing: antialiased // 僅在 Mac OS X / macOS 有效，避免文字鋸齒化
+  -moz-osx-font-smoothing: grayscale // 僅在 Mac OS X / macOS 有效，避免文字鋸齒化
+
+html
+  background: #ffffff
+
+a
+  text-decoration: none
+  color: inherit
+
+ul
+  list-style: none
+
+// 圖片自適應
+img
+  max-width: 100%
+  height: auto
+
+body
+  max-width: 1024px
+  margin: 0 auto
+  background: $primary-bg
+  color: $primary-color
+  font-size: $primary-font-size
+  -webkit-overflow-scrolling: touch
+
+form
+  input
+    width: 100%
+    height: 32px
+    font-size: 16px
+    line-height: 32px
+    color: #4A4A4A
+    background: #ffffff
+    border: 1px solid #CCCCCC
+    border-radius: 3px
+    box-shadow: inset 0 1px 0 0 #ECECEC
+
+.title-style
+  font-family: 'Noto Sans TC'
+  font-weight: 900
+  font-size: 48px
+  text-align: center

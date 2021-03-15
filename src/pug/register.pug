@@ -1,0 +1,24 @@
+extend ./base/layout.pug
+
+block append head
+  link(rel="stylesheet", href="./style/register.min.css")
+
+block main
+  include section/mixinFrame.pug
+  +frame('register', 'REGISTER')
+    div
+      .register__terms 就是這樣條款：
+        br
+        | Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elit, elementum sed varius at, adipiscing vitae est. Sed nec felis pellentesque, lacinia dui sed, ultricies sapien...
+      form.form(action="")
+        label(for="") Email Address*
+          input.form__email(type="email", name="email")
+          i.far.fa-envelope
+        label(for="") Password*
+          input.form__password(type="password", name="password")
+          i.fas.fa-lock
+          input.form__password(type="password", name="password")
+          i.fas.fa-lock
+        a(href="login.html").form__note 已經有帳號了？
+        .form__buttons
+          button.form__register 註冊

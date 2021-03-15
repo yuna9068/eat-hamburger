@@ -1,0 +1,34 @@
+#reservation.reservation
+  h2.reservation__title 我們的位置不太夠坐
+    br
+    | 要不要先訂位呢？
+  .reservation__content
+    .reservation__left
+      iframe(
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7229.218669804297!2d121.5133784947815!3d25.04732861363323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9727e339109%3A0xc34a31ce3a4abecb!2z6Ie65YyX6LuK56uZ!5e0!3m2!1szh-TW!2stw!4v1615650518862!5m2!1szh-TW!2stw"
+        width="400"
+        height="300"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+      )
+    .reservation__right
+      form.reservation-form(action="")
+        label(for="customer-name") 姓名
+        input#customer-name(type="text", name="customer-name")
+        label(for="customer-phone") 電話
+        input#customer-phone(type="tel", name="customer-phone")
+        label(for="customer-email") 信箱
+        input#customer-email(type="email", name="customer-email")
+        label(for="customer-number") 人數
+        input#customer-number(type="number", name="customer-number" min="0" max="25")
+        p 是否需要素食
+        input#customer-vegan-yes(type="radio", name="customer-vegan" value="yes")
+        label(for="customer-vegan-yes") 是
+          span
+        input#customer-vegan-no(type="radio", name="customer-vegan" value="no")
+        label(for="customer-vegan-no") 否
+          span
+        .reservation-form__buttons
+          button.reservation-form__cancel 取消
+          button.reservation-form__submit 送出

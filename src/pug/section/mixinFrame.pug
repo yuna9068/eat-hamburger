@@ -1,0 +1,8 @@
+mixin frame(className, title)
+  .frame(class=className)
+    h2.title-style 吃堡小餐館
+    p.frame__subtitle.title-style 享受美食好味道
+    .frame__content
+      p.frame__content-title.title-style= title
+      if block
+        block

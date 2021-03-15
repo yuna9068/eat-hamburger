@@ -1,0 +1,32 @@
+[
+  {
+    "nameChi": "蕃茄牛肉堡",
+    "nameEng": "Beef Burger",
+    "photo": "amirali-mirhashemian-sc5sTPMrVfk-unsplash.jpg",
+    "price": "240"
+  },
+  {
+    "nameChi": "起司漢堡",
+    "nameEng": "Cheese Burger",
+    "photo": "amirali-mirhashemian-9Bqiusimq6M-unsplash.jpg",
+    "price": "180"
+  },
+  {
+    "nameChi": "雙層牛肉漢堡",
+    "nameEng": "Double Beef Burger",
+    "photo": "amirali-mirhashemian-d-yAWqj-DRg-unsplash.jpg",
+    "price": "280"
+  },
+  {
+    "nameChi": "起司培根漢堡",
+    "nameEng": "Cheese Bacon Burger",
+    "photo": "amirali-mirhashemian-7NYn7YfpaZo-unsplash.jpg",
+    "price": "240"
+  },
+  {
+    "nameChi": "培根漢堡",
+    "nameEng": "Bacon Burger",
+    "photo": "amirali-mirhashemian-pFWQcon7T_E-unsplash.jpg",
+    "price": "180"
+  }
+]

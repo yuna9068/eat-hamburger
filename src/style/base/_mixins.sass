@@ -1,0 +1,48 @@
+// 圓形
+@mixin circle($width, $height: $width)
+  width: $width
+  height: $height
+  border-radius: 50%
+
+// flexbox
+@mixin flex($jc: flex-start, $ai: flex-start)
+  display: -webkit-box
+  display: -webkit-flex
+  display: -ms-flexbox
+  display: flex
+  justify-content: $jc
+  align-items: $ai
+
+// 清除浮動
+@mixin clearfix()
+  &::after
+    content: ""
+    display: block
+    clear: both
+
+// 按鈕通用樣式
+@mixin button($width: auto, $height: $width)
+  width: $width
+  height: $height
+  border-radius: 3px
+  cursor: pointer
+  border: none
+  font-size: 14px
+  font-weight: bold
+  color: #ffffff
+  text-align: center
+  line-height: $height
+
+// 主要按鈕
+@mixin primary-button($width: auto, $height: $width)
+  @include button($width, $height)
+  background: $primary-button-bg
+  &:hover
+    background: darken($primary-button-bg, 10%)
+
+// 次要按鈕
+@mixin secondary-button($width: auto, $height: $width)
+  @include button($width, $height)
+  background: $secondary-button-bg
+  &:hover
+    background: darken($secondary-button-bg, 10%)

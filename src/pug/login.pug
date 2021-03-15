@@ -1,0 +1,19 @@
+extend ./base/layout.pug
+
+block append head
+  link(rel="stylesheet", href="./style/login.min.css")
+
+block main
+  include section/mixinFrame.pug
+  +frame('login', 'LOGIN')
+    form.form(action="")
+      label.form__label-email(for="") Email Address*
+        input.form__email(type="email", name="email")
+        i.far.fa-envelope
+      label.form__label-password(for="") Password*
+        input.form__password(type="password", name="password")
+        i.fas.fa-lock
+      a.form__note 忘記密碼？
+      .form__buttons
+        a.form__register(href="register.html") 註冊
+        button.form__login 登入

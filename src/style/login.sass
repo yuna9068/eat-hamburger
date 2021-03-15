@@ -1,0 +1,13 @@
+@import ./base/base
+@import ./section/_mixinFrame
+
+.login
+  width: 300px
+
+.form
+  &__buttons
+    @include flex(space-between)
+  &__register
+    @include secondary-button(125px, 32px)
+  &__login
+    @include primary-button(125px, 32px)

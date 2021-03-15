@@ -1,0 +1,21 @@
+// Desktop first
+
+// 平板橫向 landscape
+@mixin tablet-landscape()
+  @media (max-width: 1024px)
+    @content
+
+// 平板直向 portrait
+@mixin tablet()
+  @media (max-width: 768px)
+    @content
+
+// Apple iPhone 11 Pro Max, XS Max, 11, XR, 6+, 6S+, 7+, 8+
+@mixin phone()
+  @media (max-width: 414px)
+    @content
+
+// Apple iPhone 5, SE, 4, 3
+@mixin phone-small()
+  @media (max-width: 320px)
+    @content

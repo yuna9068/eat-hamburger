@@ -1,0 +1,10 @@
+extends ./base/layout.pug
+
+block append head
+  link(rel="stylesheet", href="./style/index.min.css")
+
+block main
+  include ./section/feature.pug
+  include ./section/chef.pug
+  include ./section/review.pug
+  include ./section/reservation.pug

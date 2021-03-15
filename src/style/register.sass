@@ -1,0 +1,32 @@
+@import ./base/base
+@import ./section/_mixinFrame
+
+.register
+  width: 60%
+  @include tablet()
+    width: 80%
+  @include phone()
+    width: 90%
+  .frame__content
+    > div
+      @include flex(space-between)
+      flex-wrap: wrap
+  &__terms, form
+    width: 49%
+    @include phone()
+      width: 100%
+  &__terms
+    line-height: 1.5
+    @include phone()
+      margin-bottom: 30px
+
+.form
+  .fa-lock:last-child
+    bottom: 10px
+    top: auto
+  &__password:first-child
+    margin-bottom: 12px
+  &__buttons
+    @include flex(flex-end)
+  &__register
+    @include primary-button(125px, 32px)

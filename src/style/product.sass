@@ -1,0 +1,15 @@
+@import ./base/base
+@import ./section/category
+@import ./section/result
+
+main
+  padding: 48px 42px 0
+  @include flex()
+  @include phone()
+    flex-wrap: wrap
+  .category
+    flex-basis: 220px
+    @include phone()
+      flex-basis: initial
+  .result
+    flex: auto

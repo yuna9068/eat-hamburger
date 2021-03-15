@@ -1,0 +1,56 @@
+.reservation
+  padding: 50px 42px 20px
+  background: $secondary-bg
+  &__title
+    font-size: 24px
+    line-height: 1.4
+    text-align: center
+    margin-bottom: 38px
+  &__content
+    @include flex(space-between)
+    flex-wrap: wrap
+  &__left, &__right
+    width: 49%
+    margin-bottom: 30px
+    @include phone()
+      width: 100%
+    iframe
+      max-width: 100%
+      
+.reservation-form
+  font-family: PingFangTC-Light
+  label, p
+    font-size: 14px
+  input
+    margin-top: 6px
+    margin-bottom: 12px
+    padding-left: 14px
+    &[type="radio"]
+      display: none
+      & + label span
+        @include circle(16px)
+        position: relative
+        display: inline-block
+        margin: 8px 36px auto 6px
+        border: 1px solid #9B9B9B
+        vertical-align: bottom
+        cursor: pointer
+      &:checked + label span
+        border: 1px solid #4A90E2
+        &::before
+          content: ""
+          position: absolute
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%)
+          @include circle(8px)
+          background: #4A90E2
+  button
+    margin-right: 11px
+  &__buttons
+    margin-top: 28px
+    text-align: right
+  &__cancel
+    @include secondary-button(70px, 32px)
+  &__submit
+    @include primary-button(70px, 32px)

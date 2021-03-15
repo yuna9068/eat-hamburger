@@ -1,0 +1,41 @@
+footer
+  @include flex(space-between)
+  flex-wrap: wrap
+  padding: 50px 42px 20px
+  background: $chef-bg
+  .about, .contact, .social-media
+    margin-bottom: 30px
+    line-height: 1.5
+  .about
+    margin-right: 20px
+    width: 300px
+  .contact
+  .footer
+    &__title
+      margin-bottom: 16px
+    &__left
+      @include flex(space-between)
+      flex-wrap: wrap
+    &__right
+      .title-style
+        margin-bottom: 22px
+        @include phone()
+          font-size: 40px
+  .about, .contact, .footer__right
+    @include phone()
+      width: 100%
+
+.social-media
+  clear: both
+  @include flex(flex-end, center)
+  @include tablet()
+    justify-content: flex-start
+  &__item
+    margin-left: 12px
+    font-size: 36px
+  &__google
+    color: #DB4437
+  &__twitter
+    color: #41ABE1
+  &__facebook
+    color: #3A5795

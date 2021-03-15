@@ -1,0 +1,43 @@
+.feature
+  padding: 50px 62px 20px
+  &__title
+    font-size: 20px
+    line-height: 32px
+    text-align: center
+    width: fit-content
+    margin: 0 auto
+    margin-bottom: 25px
+    position: relative
+    &::before, &::after
+      content: ""
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      width: 120px
+      height: 1px
+      background: #979797
+      @include phone()
+        content: none
+    &::before
+      left: -132px
+    &::after
+      right: -132px
+  ul
+    @include flex(space-between)
+    flex-wrap: wrap
+
+.feature-card
+  width: 30%
+  text-align: center
+  margin-bottom: 30px
+  @include phone()
+    width: 100%
+  &__img
+    @include circle(200px)
+    margin-bottom: 20px
+  &__subtitle
+    font-size: 18px
+    margin-bottom: 11px
+  &__content
+    text-align: left
+    line-height: 1.3

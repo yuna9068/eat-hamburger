@@ -1,0 +1,7 @@
+extend ./base/layout.pug
+
+block append head
+  link(rel="stylesheet", href="./style/product.min.css")
+block main
+  include ./section/category.pug
+  include ./section/result.pug

@@ -1,0 +1,160 @@
+header
+  background: center/cover no-repeat url(../image/david-holifield-FGGOizCHAvc-unsplash.jpg)
+  color: $primary-color
+  padding-bottom: 145px
+
+nav
+  @include flex(space-between, center)
+  padding: 16px 48px 16px 42px
+  .title-style
+    font-size: 24px
+  .menu
+    @include flex(flex-end, center)
+    @include tablet()
+      flex: none
+      display: block
+      height: 0
+      overflow: hidden
+      position: absolute
+      top: 50px
+      right: 30px
+      box-shadow: 0px 4px 10px 1px rgba(255, 255, 255, 0.5)
+      transition: all 0.5s
+    &__item
+      margin-left: 30px
+      @include tablet()
+        display: block
+        margin-left: 0
+        width: 200px
+        font-size: 20px
+        line-height: 40px
+        text-align: center
+        letter-spacing: 30px
+        text-indent: 30px
+        border-bottom: 1px dashed $primary-color
+        background: fade-in($secondary-bg, 1)
+    &--active
+      height: 287px
+      z-index: 99
+
+%line
+  position: absolute
+  left: 0
+  width: 100%
+  height: 3px
+  background: #ffffff
+  border-radius: 5px
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5)
+
+@mixin animation($name)
+  animation-name: $name
+  animation-duration: 0.3s
+  animation-timing-function: ease
+  animation-fill-mode: both
+  
+.menu-icon
+  display: none
+  position: absolute
+  right: 30px
+  width: 30px
+  height: 18px
+  cursor: pointer
+  z-index: 99
+  @include tablet()
+    display: block
+  @for $i from 1 through 3
+    &__line#{$i}
+      @extend %line
+      top: 50% * ($i - 1)
+      @include animation(ani-line#{$i}-reverse)
+  &__animation--inactive
+    *
+      animation: none
+  &__animation--active
+    @for $i from 1 through 3
+      .menu-icon__line#{$i}
+        @include animation(ani-line#{$i})
+
+@keyframes ani-line1
+  0%
+    top: 0
+  30%
+    top: 50%
+  60%
+    top: 50%
+    transform: rotate(0)
+  100%
+    top: 50%
+    transform: rotate(45deg)
+    
+@keyframes ani-line1-reverse
+  0%
+    top: 50%
+    transform: rotate(45deg)
+  30%
+    top: 50%
+    transform: rotate(0)
+  60%
+    top: 50%
+  100%
+    top: 0
+
+@keyframes ani-line2
+  0%
+    opacity: 1
+  100%
+    opacity: 0
+    
+@keyframes ani-line2-reverse
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+@keyframes ani-line3
+  0%
+    top: 100%
+  30%
+    top: 50%
+  60%
+    top: 50%
+    transform: rotate(0)
+  100%
+    top: 50%
+    transform: rotate(-45deg)
+    
+@keyframes ani-line3-reverse
+  0%
+    top: 50%
+    transform: rotate(-45deg)
+  30%
+    top: 50%
+    transform: rotate(0)
+  60%
+    top: 50%
+  100%
+    top: 100%
+
+.info
+  width: 50%
+  background: rgba(255, 255, 255, 0.8)
+  color: #923e20
+  margin: 67px auto auto
+  padding: 20px 0 26px
+  text-align: center
+  border-radius: 10px
+  @include tablet()
+    width: 70%
+  @include phone()
+    width: 90%
+  &__slogan
+    margin-bottom: 16px
+    font-size: 36px
+    @include tablet()
+      line-height: 48px
+    br
+      display: none
+      @include tablet()
+        display: inline
+  p:not(:first-child)
+    line-height: 1.5

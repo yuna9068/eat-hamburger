@@ -1,0 +1,34 @@
+.review
+  padding: 50px 42px 20px
+  &__title
+    font-size: 24px
+    text-align: center
+    margin-bottom: 32px
+  ul
+    @include flex(space-between)
+    flex-wrap: wrap
+
+.review-card
+  width: 30%
+  margin-bottom: 30px
+  padding-top: 20px
+  padding-left: 80px
+  position: relative
+  @include phone()
+    width: 100%
+  &__avatar
+    @include circle(67px)
+    position: absolute
+    left: 0
+    top: 0
+  &__name
+    font-size: 18px
+    margin-bottom: 22px
+  &__content
+    line-height: 24px
+  &__job
+    color: rgba($primary-color, .75)
+    line-height: 24px
+    text-align: right
+    &::before
+      content: "-- "
